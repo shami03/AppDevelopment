@@ -1,0 +1,120 @@
+<<<<<<< HEAD
+/* FAQ.css */
+
+/* Style the container */
+.faq-container {
+    margin-top: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #d3a7a7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .head{
+    text-align: center;
+  }
+  .buttn{
+    margin-left: 50%;
+    color: rgb(255, 255, 255);
+    background-color: #333;
+  }
+  /* Style the heading */
+  h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the questions */
+  .faq-question {
+    font-size: 18px;
+    color: #333;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .faq-question:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .faq-question.active {
+    background-color: black;
+    color: #fff;
+  }
+  
+  /* Style the answers */
+  .faq-answer {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin: 15px 0;
+  }
+  
+=======
+/* FAQ.css */
+
+/* Style the container */
+.faq-container {
+    margin-top: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #d3a7a7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .head{
+    text-align: center;
+  }
+  .buttn{
+    margin-left: 50%;
+    color: rgb(255, 255, 255);
+    background-color: #333;
+  }
+  /* Style the heading */
+  h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the questions */
+  .faq-question {
+    font-size: 18px;
+    color: #333;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .faq-question:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .faq-question.active {
+    background-color: black;
+    color: #fff;
+  }
+  
+  /* Style the answers */
+  .faq-answer {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin: 15px 0;
+  }
+  
+>>>>>>> origin/main
+  /* Customize any other styles as needed */

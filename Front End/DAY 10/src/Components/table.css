@@ -1,0 +1,81 @@
+<<<<<<< HEAD
+/* PlayerDetailsTable.css */
+
+.player-details-container {
+    margin-top: 70px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(100, 88, 88, 0.788);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(117, 96, 96, 0.575);
+}
+.butn{
+    margin-top: 30px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 5px;
+}
+.player-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid black; /* Add this line to set the table border color to black */
+}
+
+.player-details-table th,
+.player-details-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black; /* Add this line to set the cell borders to black */
+}
+
+/* Add hover animations */
+.player-details-table tr:hover {
+    background-color: #06000088;
+    transition: background-color 0.3s ease;
+}
+=======
+/* PlayerDetailsTable.css */
+
+.player-details-container {
+    margin-top: 70px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(100, 88, 88, 0.788);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(117, 96, 96, 0.575);
+}
+.butn{
+    margin-top: 30px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 5px;
+}
+.player-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid black; /* Add this line to set the table border color to black */
+}
+
+.player-details-table th,
+.player-details-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black; /* Add this line to set the cell borders to black */
+}
+
+/* Add hover animations */
+.player-details-table tr:hover {
+    background-color: #06000088;
+    transition: background-color 0.3s ease;
+}
+>>>>>>> origin/main
