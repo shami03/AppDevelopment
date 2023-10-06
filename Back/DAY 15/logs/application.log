@@ -1,0 +1,33 @@
+2023-10-06T10:25:42.688+05:30  INFO 15584 --- [restartedMain] com.iamneo.ecom.EcomApplication          : Starting EcomApplication using Java 19.0.2 with PID 15584 (E:\Ecomm_Sample_v3\target\classes started by shami in E:\Ecomm_Sample_v3)
+2023-10-06T10:25:42.690+05:30  INFO 15584 --- [restartedMain] com.iamneo.ecom.EcomApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-10-06T10:25:42.771+05:30  INFO 15584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-06T10:25:42.771+05:30  INFO 15584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-06T10:25:44.573+05:30  INFO 15584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-06T10:25:44.656+05:30  INFO 15584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interfaces.
+2023-10-06T10:25:45.526+05:30  INFO 15584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-10-06T10:25:45.539+05:30  INFO 15584 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-06T10:25:45.539+05:30  INFO 15584 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-06T10:25:45.605+05:30  INFO 15584 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-06T10:25:45.605+05:30  INFO 15584 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2831 ms
+2023-10-06T10:25:45.909+05:30  INFO 15584 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-06T10:25:45.993+05:30  INFO 15584 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-06T10:25:45.996+05:30  INFO 15584 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-06T10:25:46.186+05:30  INFO 15584 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-06T10:25:46.357+05:30  INFO 15584 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-06T10:25:46.382+05:30  INFO 15584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-06T10:25:46.840+05:30  INFO 15584 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fab23e7
+2023-10-06T10:25:46.843+05:30  INFO 15584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-06T10:25:46.961+05:30  WARN 15584 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-06T10:25:47.297+05:30  INFO 15584 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-06T10:25:48.257+05:30  INFO 15584 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-06T10:25:48.593+05:30  INFO 15584 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-06T10:25:49.221+05:30  WARN 15584 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-06T10:25:49.637+05:30  INFO 15584 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-10-06T10:25:49.726+05:30  INFO 15584 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@715ad0e7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cd12651, org.springframework.security.web.context.SecurityContextHolderFilter@23b397cd, org.springframework.security.web.header.HeaderWriterFilter@3caf9b3a, org.springframework.web.filter.CorsFilter@3659c7e0, org.springframework.security.web.authentication.logout.LogoutFilter@5093bdb7, com.iamneo.ecom.config.JwtAuthenticationFilter@1ccf2d84, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b600bea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c27e039, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c21b8da, org.springframework.security.web.session.SessionManagementFilter@20bbe01b, org.springframework.security.web.access.ExceptionTranslationFilter@535c78bd, org.springframework.security.web.access.intercept.AuthorizationFilter@2f9046c3]
+2023-10-06T10:25:50.208+05:30  INFO 15584 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-06T10:25:50.290+05:30  INFO 15584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-10-06T10:25:50.324+05:30  INFO 15584 --- [restartedMain] com.iamneo.ecom.EcomApplication          : Started EcomApplication in 8.173 seconds (process running for 9.225)
+2023-10-06T10:25:50.608+05:30  INFO 15584 --- [RMI TCP Connection(5)-172.20.10.3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-06T10:25:50.608+05:30  INFO 15584 --- [RMI TCP Connection(5)-172.20.10.3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-06T10:25:50.609+05:30  INFO 15584 --- [RMI TCP Connection(5)-172.20.10.3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-06T10:40:46.243+05:30  WARN 15584 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s79ms981µs500ns).
