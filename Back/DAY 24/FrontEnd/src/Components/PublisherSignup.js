@@ -1,0 +1,169 @@
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import bcrypt from 'bcryptjs'; 
+import axios from 'axios';
+
+function PublisherSignup() {
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+  const [conPassword, setConPassword] = useState('');
+  const [isChecked, setIsChecked] = useState(false);
+  const nav = useNavigate();
+  const [formErrors, setFormErrors] = useState({
+    name: '',
+    email: '',
+    password: '',
+    conPassword: '',
+    terms: '',
+  });
+
+  const check = () => {
+    setIsChecked(!isChecked);
+    setFormErrors({ ...formErrors, terms: '' });
+  };
+
+  const handleInputChange = (field, value) => {
+    setFormErrors({ ...formErrors, [field]: '' });
+    switch (field) {
+      case 'name':
+        setName(value);
+        break;
+      case 'email':
+        setEmail(value);
+        break;
+      case 'password':
+        setPassword(value);
+        break;
+      case 'conPassword':
+        setConPassword(value);
+        break;
+      default:
+        break;
+    }
+  };
+
+  const validate = (e) => {
+    e.preventDefault();
+    const errors = {};
+
+    if (name.length === 0) {
+      errors.name = 'Name is required';
+    }
+
+    if (email.length === 0) {
+      errors.email = 'Email is required';
+    }
+
+    if (password.length === 0) {
+      errors.password = 'Password is required';
+    } else if (password.length < 8) {
+      errors.password = 'Password must be at least 8 characters';
+    }
+
+    if (conPassword.length === 0) {
+      errors.conPassword = 'Confirm Password is required';
+    } else if (password !== conPassword) {
+      errors.conPassword = 'Passwords do not match';
+    }
+
+    if (!isChecked) {
+      errors.terms = 'Please agree to the Terms and Conditions';
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+    } else {
+      setFormErrors({
+        name: '',
+        email: '',
+        password: '',
+        conPassword: '',
+        terms: '',
+      });
+
+      const user = {
+        role: 'PLAYER',
+        name,
+        email,
+        password: password, 
+      };
+      axios.post("http://localhost:8080/auth/register", user)
+  .then(response => {
+    alert("User Registered! Kindly Login to proceed")
+    nav("/login")
+    
+  })
+  .catch(error => {
+   alert(error.response.data)
+  });
+      
+    }
+  };
+
+  return (
+    <div className="ins-register">
+      <div className="outer-container">
+        <div className="content-container">
+          <br></br>
+          <br></br>
+          <br></br>
+          <h2>REGISTER AS USER</h2>
+          <form>
+            <div>
+              <input
+                onChange={(e) => handleInputChange('name', e.target.value)}
+                type="text"
+                placeholder="Name"
+              />
+              {formErrors.name && <p className="error">{formErrors.name}</p>}
+            </div>
+            <div>
+              <input
+                onChange={(e) => handleInputChange('email', e.target.value)}
+                type="email"
+                placeholder="Email"
+              />
+              {formErrors.email && <p className="error">{formErrors.email}</p>}
+            </div>
+            <div>
+              <input
+                onChange={(e) => handleInputChange('password', e.target.value)}
+                type="password"
+                placeholder="Password"
+              />
+              {formErrors.password && <p className="error">{formErrors.password}</p>}
+            </div>
+            <div>
+              <input
+                onChange={(e) => handleInputChange('conPassword', e.target.value)}
+                type="password"
+                placeholder="Confirm Password"
+              />
+              {formErrors.conPassword && (
+                <p className="error">{formErrors.conPassword}</p>
+              )}
+            </div>
+            <div className="checkbox">
+              <input onClick={check} type="checkbox" id="remember" />
+              <label htmlFor="remember">I agree to the Terms and Conditions</label>
+              {formErrors.terms && <p className="error">{formErrors.terms}</p>}
+            </div>
+            <button onClick={validate} type="submit">
+              Register
+            </button>
+          </form>
+          <h3 className="log">Already have an account? &nbsp;</h3>
+          <h3 id="log">
+            <Link id="register" to="/login">
+              Login !
+            </Link>
+          </h3>
+        </div>
+        
+      </div>
+    </div>
+  );
+}
+
+export default PublisherSignup;

@@ -1,0 +1,32 @@
+
+eureka:
+  instance:
+    hostname: localhost
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: AUTH-SERVER
+          uri: lb://AUTH-SERVER
+          predicates:
+            - Path=/auth/**
+        - id: GAMEZ-SERVER
+          uri: lb://GAMEZ-SERVER
+          predicates:
+            - Path=/Game/**
+        - id: PLAYERZ-SERVER
+          uri: lb:// PLAYERZ-SERVER
+          predicates:
+             - Path=/players/**
+
+  security:
+    csrf:
+      enabled: false
+
+            
+            
+            
+            
