@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "properties": [
         {
@@ -6,4 +7,14 @@
             "description": "A description for 'application.jwt.secret-key'"
         }
     ]
+=======
+{
+    "properties": [
+        {
+            "name": "application.jwt.secret-key",
+            "type": "java.lang.String",
+            "description": "A description for 'application.jwt.secret-key'"
+        }
+    ]
+>>>>>>> 88530386508e99c84e4079ae15eb0f84e42bd7c1
 }

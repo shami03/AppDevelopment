@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.iamneo.ecom.controller;
 
 import java.util.List;
@@ -48,3 +49,55 @@ public class UserController {
                 : ResponseEntity.notFound().build();
     }
 }
+=======
+package com.iamneo.ecom.controller;
+
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import com.iamneo.ecom.constant.Api;
+import com.iamneo.ecom.dto.request.UserRequest;
+import com.iamneo.ecom.dto.response.UserResponse;
+import com.iamneo.ecom.service.UserService;
+
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
+
+
+
+@RestController
+@RequestMapping(Api.USER)
+@RequiredArgsConstructor
+@Tag(name = "User")
+public class UserController {
+
+    private final UserService userService;
+
+    @GetMapping("/all")
+    public ResponseEntity<List<UserResponse>> getAllUsers() {
+        List<UserResponse> userList = userService.getAllUsers();
+        return !userList.isEmpty() ? ResponseEntity.ok().body(userList) : ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/{uid}")
+    public ResponseEntity<UserResponse> getUser(@PathVariable Long uid) {
+        UserResponse userResponse = userService.getUser(uid);
+        return userResponse != null ? ResponseEntity.ok().body(userResponse) : ResponseEntity.notFound().build();
+    }
+
+    @PutMapping("/update/{uid}")
+    public ResponseEntity<UserResponse> updateUser(@RequestBody UserRequest request, @PathVariable Long uid) {
+        UserResponse userResponse = userService.updateUser(request, uid);
+        return userResponse != null ? ResponseEntity.ok().body(userResponse) : ResponseEntity.notFound().build();
+    }
+
+    @DeleteMapping("/delete/{uid}")
+    public ResponseEntity<String> deleteUser(@PathVariable Long uid) {
+        boolean isDeleted = userService.deleteProduct(uid);
+        return isDeleted ? ResponseEntity.ok().body("User deleted successfully!")
+                : ResponseEntity.notFound().build();
+    }
+}
+>>>>>>> 88530386508e99c84e4079ae15eb0f84e42bd7c1
